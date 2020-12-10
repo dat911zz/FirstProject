@@ -1,0 +1,3 @@
+﻿  110101010101110.cpp
+C:\Users\datcy\source\repos\testM2C\testM2C\110101010101110.cpp(64,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  testM2C.vcxproj -> C:\Users\datcy\source\repos\testM2C\Debug\testM2C.exe
