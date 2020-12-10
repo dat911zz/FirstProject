@@ -1,0 +1,70 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void nhapmn(int& m, int& n)
+{
+	printf("\nNhap so dong m:");
+	scanf("%d", &m);
+	printf("\nNhap so cot n:");
+	scanf("%d", &n);
+}
+void nhapM2C(int a[][100], int m, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			printf("\nNhap gia tri phan tu a[%d][%d]:", i, j);
+			scanf("%d", &a[i][j]);
+		}
+	}
+}
+void nhapM2Crand(int a[][100], int m, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			a[i][j] = rand();
+			printf("\nGia tri nhap tu dong a[%d][%d]: %d", i, j, a[i][j]);
+		}
+	}
+}
+void xuatbien(int a[][100], int m, int n)
+{
+	printf("\n");
+	for (int i = 0; i < 120; i++)
+	{
+		printf("*");
+	}
+	printf("\n\t\t\t**********Gia tri o cac vi tri bien**********");
+	printf("\n\tTop");
+	for (int j = 0; j < n; j++)
+	{
+		printf("\t%d", a[0][j]);
+	}
+	printf("\n\tLeft");
+	for (int i = 0; i < n; i++)
+	{
+		printf("\t%d", a[i][0]);
+	}
+	printf("\n\tBottom");
+	for (int j = 0; j < n; j++)
+	{
+		printf("\t%d", a[n - 1][j]);
+	}
+	printf("\n\tRight");
+	for (int i = 0; i < n; i++)
+	{
+		printf("\t%d", a[i][n - 1]);
+	}
+}
+void main()
+{
+	int a[100][100];
+	int m, n;
+	nhapmn(m, n);
+	nhapM2Crand(a, m, n);
+	xuatbien(a, m, n);
+}
